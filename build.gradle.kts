@@ -13,11 +13,9 @@ plugins {
 
 object KodeinVersions {
 
-    const val kotlinGradle = "1.2.31"
+    const val kotlinGradle = "1.3.0-rc-146"
 
-    const val kotlin = "1.2.70"
-
-    const val konan = "0.9.2"
+    const val kotlin = "1.3.0-rc-146"
 
     const val androidBuild = "3.1.4"
 }
@@ -26,6 +24,7 @@ repositories {
     jcenter()
     google()
     maven(url = "https://plugins.gradle.org/m2/")
+    maven(url = "https://dl.bintray.com/kotlin/kotlin-eap")
     maven(url = "https://dl.bintray.com/jetbrains/kotlin-native-dependencies")
     maven(url = "https://dl.bintray.com/salomonbrys/KMP-Gradle-Utils")
     maven(url = "https://dl.bintray.com/salomonbrys/wup-digital-maven")
@@ -40,7 +39,6 @@ dependencies {
     implementation("org.jetbrains.kotlin:kotlin-stdlib-jdk7:${KodeinVersions.kotlinGradle}")
 
     api("org.jetbrains.kotlin:kotlin-gradle-plugin:${KodeinVersions.kotlin}")
-    api("org.jetbrains.kotlin:kotlin-native-gradle-plugin:${KodeinVersions.konan}")
 
     api("com.android.tools.build:gradle:${KodeinVersions.androidBuild}")
 
